@@ -18,20 +18,19 @@
 <body>
     <div id="app">
         <div class="container">
-            <div class="row text-center justify-content-center">
+            <div class="row text-center justify-content-center ">
                 <div class="col-6">
                     <h1>Vue js API's !</h1>
                     <div class="spinner-border" role="status" v-if="loading">
                         <span class="visually-hidden">Loading...</span>
                     </div>
-
-                    <ul class="list-group">
-                        <li class="list-group-item" v-for="item in emailList">
+                    <ul v-if="emailList.length == 10" class="list-group">
+                        <li class="list-group-item" 
+                        v-for="item in emailList">
                             {{item}}
                         </li>
                     </ul>
-
-                    <button @click="getData" class="btn btn-success mt-3">GetData</button>
+                    <button v-if="emailList.length == 10" @click="getData" class="btn btn-success mt-3">GetData</button>
                 </div>
 
 
