@@ -4,7 +4,7 @@ const app = new Vue({
         emailList: [],
         loading: ''
     },
-    methods:{ 
+    methods: {
 
         getData() {
             this.emailList = [];
@@ -24,7 +24,6 @@ const app = new Vue({
                     })
             }
         }
-        
     },
     created() {
         this.loading = true;
